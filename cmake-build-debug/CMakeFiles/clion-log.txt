@@ -1,0 +1,4 @@
+C:\Users\Devin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\172.3968.17\bin\cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Devin\Desktop\Flow\Algorithms
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Devin/Desktop/Flow/Algorithms/cmake-build-debug
