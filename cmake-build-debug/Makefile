@@ -122,59 +122,59 @@ Algorithms/fast:
 	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/build
 .PHONY : Algorithms/fast
 
-DFS.obj: DFS.cpp.obj
+algorithms/c++/DFS.obj: algorithms/c++/DFS.cpp.obj
 
-.PHONY : DFS.obj
-
-# target to build an object file
-DFS.cpp.obj:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/DFS.cpp.obj
-.PHONY : DFS.cpp.obj
-
-DFS.i: DFS.cpp.i
-
-.PHONY : DFS.i
-
-# target to preprocess a source file
-DFS.cpp.i:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/DFS.cpp.i
-.PHONY : DFS.cpp.i
-
-DFS.s: DFS.cpp.s
-
-.PHONY : DFS.s
-
-# target to generate assembly for a file
-DFS.cpp.s:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/DFS.cpp.s
-.PHONY : DFS.cpp.s
-
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
+.PHONY : algorithms/c++/DFS.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+algorithms/c++/DFS.cpp.obj:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj
+.PHONY : algorithms/c++/DFS.cpp.obj
 
-main.i: main.cpp.i
+algorithms/c++/DFS.i: algorithms/c++/DFS.cpp.i
 
-.PHONY : main.i
+.PHONY : algorithms/c++/DFS.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/main.cpp.i
-.PHONY : main.cpp.i
+algorithms/c++/DFS.cpp.i:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.i
+.PHONY : algorithms/c++/DFS.cpp.i
 
-main.s: main.cpp.s
+algorithms/c++/DFS.s: algorithms/c++/DFS.cpp.s
 
-.PHONY : main.s
+.PHONY : algorithms/c++/DFS.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/main.cpp.s
-.PHONY : main.cpp.s
+algorithms/c++/DFS.cpp.s:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.s
+.PHONY : algorithms/c++/DFS.cpp.s
+
+solutions/c++/KnapSack.obj: solutions/c++/KnapSack.cpp.obj
+
+.PHONY : solutions/c++/KnapSack.obj
+
+# target to build an object file
+solutions/c++/KnapSack.cpp.obj:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj
+.PHONY : solutions/c++/KnapSack.cpp.obj
+
+solutions/c++/KnapSack.i: solutions/c++/KnapSack.cpp.i
+
+.PHONY : solutions/c++/KnapSack.i
+
+# target to preprocess a source file
+solutions/c++/KnapSack.cpp.i:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.i
+.PHONY : solutions/c++/KnapSack.cpp.i
+
+solutions/c++/KnapSack.s: solutions/c++/KnapSack.cpp.s
+
+.PHONY : solutions/c++/KnapSack.s
+
+# target to generate assembly for a file
+solutions/c++/KnapSack.cpp.s:
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.s
+.PHONY : solutions/c++/KnapSack.cpp.s
 
 # Help Target
 help:
@@ -185,12 +185,12 @@ help:
 	@echo ... Algorithms
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... DFS.obj
-	@echo ... DFS.i
-	@echo ... DFS.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... algorithms/c++/DFS.obj
+	@echo ... algorithms/c++/DFS.i
+	@echo ... algorithms/c++/DFS.s
+	@echo ... solutions/c++/KnapSack.obj
+	@echo ... solutions/c++/KnapSack.i
+	@echo ... solutions/c++/KnapSack.s
 .PHONY : help
 
 

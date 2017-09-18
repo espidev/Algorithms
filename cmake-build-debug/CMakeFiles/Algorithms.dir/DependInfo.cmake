@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Devin/Desktop/Flow/Algorithms/DFS.cpp" "C:/Users/Devin/Desktop/Flow/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir/DFS.cpp.obj"
-  "C:/Users/Devin/Desktop/Flow/Algorithms/main.cpp" "C:/Users/Devin/Desktop/Flow/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir/main.cpp.obj"
+  "C:/Users/Devin/Desktop/Flow/Algorithms/algorithms/c++/DFS.cpp" "C:/Users/Devin/Desktop/Flow/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj"
+  "C:/Users/Devin/Desktop/Flow/Algorithms/solutions/c++/KnapSack.cpp" "C:/Users/Devin/Desktop/Flow/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

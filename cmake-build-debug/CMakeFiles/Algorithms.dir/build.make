@@ -56,64 +56,64 @@ include CMakeFiles/Algorithms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Algorithms.dir/flags.make
 
-CMakeFiles/Algorithms.dir/main.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Devin\Desktop\Flow\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\main.cpp.obj -c C:\Users\Devin\Desktop\Flow\Algorithms\main.cpp
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj: ../algorithms/c++/DFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Devin\Desktop\Flow\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\algorithms\c++\DFS.cpp.obj -c C:\Users\Devin\Desktop\Flow\Algorithms\algorithms\c++\DFS.cpp
 
-CMakeFiles/Algorithms.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Devin\Desktop\Flow\Algorithms\main.cpp > CMakeFiles\Algorithms.dir\main.cpp.i
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Devin\Desktop\Flow\Algorithms\algorithms\c++\DFS.cpp > CMakeFiles\Algorithms.dir\algorithms\c++\DFS.cpp.i
 
-CMakeFiles/Algorithms.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Devin\Desktop\Flow\Algorithms\main.cpp -o CMakeFiles\Algorithms.dir\main.cpp.s
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Devin\Desktop\Flow\Algorithms\algorithms\c++\DFS.cpp -o CMakeFiles\Algorithms.dir\algorithms\c++\DFS.cpp.s
 
-CMakeFiles/Algorithms.dir/main.cpp.obj.requires:
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.requires:
 
-.PHONY : CMakeFiles/Algorithms.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.requires
 
-CMakeFiles/Algorithms.dir/main.cpp.obj.provides: CMakeFiles/Algorithms.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/Algorithms.dir/main.cpp.obj.provides
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.provides: CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.provides.build
+.PHONY : CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.provides
 
-CMakeFiles/Algorithms.dir/main.cpp.obj.provides.build: CMakeFiles/Algorithms.dir/main.cpp.obj
+CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.provides.build: CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj
 
 
-CMakeFiles/Algorithms.dir/DFS.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
-CMakeFiles/Algorithms.dir/DFS.cpp.obj: ../DFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Devin\Desktop\Flow\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Algorithms.dir/DFS.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\DFS.cpp.obj -c C:\Users\Devin\Desktop\Flow\Algorithms\DFS.cpp
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj: CMakeFiles/Algorithms.dir/flags.make
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj: ../solutions/c++/KnapSack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Devin\Desktop\Flow\Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Algorithms.dir\solutions\c++\KnapSack.cpp.obj -c C:\Users\Devin\Desktop\Flow\Algorithms\solutions\c++\KnapSack.cpp
 
-CMakeFiles/Algorithms.dir/DFS.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/DFS.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Devin\Desktop\Flow\Algorithms\DFS.cpp > CMakeFiles\Algorithms.dir\DFS.cpp.i
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Devin\Desktop\Flow\Algorithms\solutions\c++\KnapSack.cpp > CMakeFiles\Algorithms.dir\solutions\c++\KnapSack.cpp.i
 
-CMakeFiles/Algorithms.dir/DFS.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/DFS.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Devin\Desktop\Flow\Algorithms\DFS.cpp -o CMakeFiles\Algorithms.dir\DFS.cpp.s
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Devin\Desktop\Flow\Algorithms\solutions\c++\KnapSack.cpp -o CMakeFiles\Algorithms.dir\solutions\c++\KnapSack.cpp.s
 
-CMakeFiles/Algorithms.dir/DFS.cpp.obj.requires:
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.requires:
 
-.PHONY : CMakeFiles/Algorithms.dir/DFS.cpp.obj.requires
+.PHONY : CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.requires
 
-CMakeFiles/Algorithms.dir/DFS.cpp.obj.provides: CMakeFiles/Algorithms.dir/DFS.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/DFS.cpp.obj.provides.build
-.PHONY : CMakeFiles/Algorithms.dir/DFS.cpp.obj.provides
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.provides: CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Algorithms.dir\build.make CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.provides.build
+.PHONY : CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.provides
 
-CMakeFiles/Algorithms.dir/DFS.cpp.obj.provides.build: CMakeFiles/Algorithms.dir/DFS.cpp.obj
+CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.provides.build: CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj
 
 
 # Object files for target Algorithms
 Algorithms_OBJECTS = \
-"CMakeFiles/Algorithms.dir/main.cpp.obj" \
-"CMakeFiles/Algorithms.dir/DFS.cpp.obj"
+"CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj" \
+"CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj"
 
 # External object files for target Algorithms
 Algorithms_EXTERNAL_OBJECTS =
 
-Algorithms.exe: CMakeFiles/Algorithms.dir/main.cpp.obj
-Algorithms.exe: CMakeFiles/Algorithms.dir/DFS.cpp.obj
+Algorithms.exe: CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj
+Algorithms.exe: CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj
 Algorithms.exe: CMakeFiles/Algorithms.dir/build.make
 Algorithms.exe: CMakeFiles/Algorithms.dir/linklibs.rsp
 Algorithms.exe: CMakeFiles/Algorithms.dir/objects1.rsp
@@ -126,8 +126,8 @@ CMakeFiles/Algorithms.dir/build: Algorithms.exe
 
 .PHONY : CMakeFiles/Algorithms.dir/build
 
-CMakeFiles/Algorithms.dir/requires: CMakeFiles/Algorithms.dir/main.cpp.obj.requires
-CMakeFiles/Algorithms.dir/requires: CMakeFiles/Algorithms.dir/DFS.cpp.obj.requires
+CMakeFiles/Algorithms.dir/requires: CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj.requires
+CMakeFiles/Algorithms.dir/requires: CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj.requires
 
 .PHONY : CMakeFiles/Algorithms.dir/requires
 

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Devin/Desktop/Flow/Algorithms/algorithms/c++/DFS.cpp
+bits/stdc++.h
+-
+
+C:/Users/Devin/Desktop/Flow/Algorithms/solutions/c++/KnapSack.cpp
+bits/stdc++.h
+-
+

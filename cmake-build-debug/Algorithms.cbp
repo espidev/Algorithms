@@ -82,10 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Devin/Desktop/Flow/Algorithms/DFS.cpp">
+		<Unit filename="C:/Users/Devin/Desktop/Flow/Algorithms/algorithms/c++/DFS.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Devin/Desktop/Flow/Algorithms/main.cpp">
+		<Unit filename="C:/Users/Devin/Desktop/Flow/Algorithms/solutions/c++/KnapSack.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/Devin/Desktop/Flow/Algorithms/CMakeLists.txt">

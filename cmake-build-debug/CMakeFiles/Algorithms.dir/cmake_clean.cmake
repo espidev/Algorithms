@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Algorithms.dir/main.cpp.obj"
-  "CMakeFiles/Algorithms.dir/DFS.cpp.obj"
+  "CMakeFiles/Algorithms.dir/algorithms/c++/DFS.cpp.obj"
+  "CMakeFiles/Algorithms.dir/solutions/c++/KnapSack.cpp.obj"
   "Algorithms.pdb"
   "Algorithms.exe"
   "Algorithms.exe.manifest"
