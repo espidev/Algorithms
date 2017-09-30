@@ -42,7 +42,11 @@ int firstFlip(int it){
     l[it] = 0;
     //ret++;
     //std::cout << mp.find(it-1)-> second << " " << ret << std::endl;
-    return ret + mp.find(it-1)->second;
+    int a = 0;
+    for(int i = it-1; i > -1; i--){
+        a += mp.find(i)->second;
+    }
+    return ret + a;
 }
 
 int main() {
