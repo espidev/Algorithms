@@ -22,13 +22,13 @@ int main() {
 								orgs[org[x][y]].push_back(orgs[org[i][j]][k]);
 								org[orgs[org[i][j]][k].first][orgs[org[i][j]][k].second] = org[x][y];
 							}
-
 							ans--;
 						}
 						assigned = true;
 						org[i][j] = org[x][y];
 						orgs[org[x][y]].push_back(make_pair(i, j));
 					}
+					return;
 				};
 
 				if(map[i][j] == '@') {
