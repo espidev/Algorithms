@@ -3,7 +3,7 @@ using namespace std;
 
 int T, G;
 vector<int> p(4, 0);
-vector<int> m[4];
+bool m[4][4];
 vector<pair<int, int>> matches;
 
 int getMax(vector<int>& pl) {
@@ -23,16 +23,7 @@ int getMax(vector<int>& pl) {
 
 int dfs(vector<pair<int, int>> matchesl, vector<int> pl) {
     if(matchesl.empty()){
-        /*for (int i : pl) {
-            cout << i << " ";
-        }
-        cout << getMax(pl) << endl;*/
         if(getMax(pl) == T) {
-            /*cout << "win ";
-            for (int i : pl) {
-                cout << i << " ";
-            }
-            cout << endl;*/
             return 1;
         }
         return 0;
@@ -54,14 +45,11 @@ int dfs(vector<pair<int, int>> matchesl, vector<int> pl) {
 int main() {
     cin >> T >> G;
     T--;
-    for(int i = 0; i < 4; i++) {
-        m[i] = vector<int>(4);
-    }
     for(int i = 0; i < G; i++) {
         int A, B, As, Bs;
         cin >> A >> B >> As >> Bs;
-        m[A-1][B-1] = 1;
-        m[B-1][A-1] = 1;
+        m[A-1][B-1] = true;
+        m[B-1][A-1] = true;
         if(As > Bs) {
             p[A-1] += 3;
         }
@@ -78,8 +66,8 @@ int main() {
             if(i == j) continue;
             if(m[i][j] == 0) {
                 matches.emplace_back(i, j);
-                m[i][j] = 1;
-                m[j][i] = 1;
+                m[i][j] = true;
+                m[j][i] = true;
             }
         }
     }
