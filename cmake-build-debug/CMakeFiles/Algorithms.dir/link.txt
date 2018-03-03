@@ -1,3 +1,0 @@
-C:\Users\Devin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\172.3968.17\bin\cmake\bin\cmake.exe -E remove -f CMakeFiles\Algorithms.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Algorithms.dir/objects.a @CMakeFiles\Algorithms.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Algorithms.dir/objects.a -Wl,--no-whole-archive  -o Algorithms.exe -Wl,--out-implib,libAlgorithms.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Algorithms.dir\linklibs.rsp

@@ -20,6 +20,18 @@ int gcd(int a, int b, int& x, int& y) {
     return d;
 }
 
+bool findOneSolution(int a, int b, int c, int& x, int& y) {
+    int g = gcd(abs(a), abs(b), x, y);
+    if(c % g != 0) {
+        return false;
+    }
+    x = x*c/g;
+    y = y*c/g;
+    if(a < 0) x = -1 * x;
+    if(b < 0) y = -1 * y;
+    return true;
+}
+
 int main() {
     int x, y;
     gcd(5, 3, x, y);
