@@ -34,7 +34,8 @@ int main() {
                     graph.erase(j);
                 }
                 else {
-                    for(int k = 0; k < d.size(); k++) { //check each node to delete arrows if the node doesn't exist anymore
+                    for(int k = 0; k < d.size(); k++) { //check each node to delete arrows if the 
+node doesn't exist anymore
                         if(graph.find(d[k]) == graph.end()) {
                             d.erase(d.begin() + k);
                             if(d.empty()) {
