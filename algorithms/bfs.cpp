@@ -2,8 +2,9 @@
 void bfs(int startingNode, vector<vector<int>>& graph) {
 	queue<int> q;
 	q.push(startingNode);
-	int[MAXN] visited;
+	int visited[MAXN];
 	while (!q.empty()) {
+                visited[q.top()] = true;
 
 		// do something to node (q.top())
 

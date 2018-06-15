@@ -1,9 +1,3 @@
-/*
-TASK: gift1
-ID: devinha5
-LANG: C++11
- */
-
 #include <bits/stdc++.h>
 
 /*
