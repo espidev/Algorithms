@@ -6,6 +6,7 @@ using namespace std;
 /*
  * Given a tree T of N nodes, where each node i has Ci coins attached with it. You have to choose a subset of nodes such that no two adjacent 
  * nodes(i.e. nodes connected directly by an edge) are chosen and sum of coins attached with nodes in chosen subset is maximum.
+ * INDEX STARTS AT 1!
  */
 
 int N;
