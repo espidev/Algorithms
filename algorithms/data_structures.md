@@ -1,5 +1,7 @@
 # Data Structure Notes
 
+* When computing number of subsets, it's 2^N and should be using bitmask
+
 ## Adjacency List
 
 ## Segment Tree (Range Query)
