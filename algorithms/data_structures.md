@@ -16,3 +16,5 @@ It's effectively a binary tree!
 ## Disjoint set (Union Find)
 
 ## Trie
+
+## Sparse Table
