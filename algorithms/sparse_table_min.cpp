@@ -9,7 +9,7 @@ using namespace std;
 
 int N, Q;
 int arr[MAXN][30]; // sparse table (N, log2(N))
-int in[MAXN];
+int in[MAXN]; // input
 
 void generate() {
 	for (int i = 0; i < N; i++) {
@@ -18,15 +18,14 @@ void generate() {
 	int levels = floor(log2(N));
 	for (int i = 1; i <= levels; i++) {
 		for (int j = 0; j < N; j++) {
-			arr[j][i] = min(arr[j][i-1], arr[j + (1 << (i - 1))][i-1]); // function 
-here
+			arr[j][i] = min(arr[j][i-1], arr[j + (1 << (i - 1))][i-1]); // function here
 		}
 	}
 }
 
 int query(int l, int r) {
 	int level = floor(log2(r-l+1));
-	return min(arr[l][level], arr[r - (1 << level) + 1][level]);
+	return min(arr[l][level], arr[r - (1 << level) + 1][level]); // function here
 }
 
 int main() {
