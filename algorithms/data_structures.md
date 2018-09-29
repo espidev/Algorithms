@@ -4,6 +4,7 @@
 * __builtin_popcount(unsigned int) in the GNU C++ compiler calculates the number of 1s in a binary number (Integer.bitCount(i, j) in Java)
 * std::bitset is useful for bit related stuffs
 * stoi() can specify a base in the 3rd parameter
+* puts() is like the most useful thing ever why have i not used it what
 
 ## Adjacency List
 
@@ -18,3 +19,5 @@ It's effectively a binary tree!
 ## Trie
 
 ## Sparse Table
+
+## Lowest Common Ancestor
