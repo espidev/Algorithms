@@ -1,14 +1,12 @@
 
     #include <bits/stdc++.h>
-    
     #define MAXN 200001
-    
     using namespace std;
-    
+
     // also known as Union-Find
 
     int djs[MAXN], djrank[MAXN];
-    
+
     // find the id of an integer in the set (can compare findSet(x) == findSet(y))
 
     int findSet(int x) { //get representative
@@ -17,7 +15,7 @@
         }
         return djs[x];
     }
-    
+
     // merge two sets using a member
 
     void mergeSet(int x, int y) {
@@ -32,7 +30,4 @@
             djrank[py] = djrank[py] + 1;
         }
     }
-
-    
-    
 
