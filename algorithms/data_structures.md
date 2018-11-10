@@ -6,6 +6,9 @@
 * stoi() can specify a base in the 3rd parameter
 * puts() is like the most useful thing ever why have i not used it what
 
+## Prefix Sum vs Segment Tree
+* Different ways to query sums (O(1) vs. O(nlogn))
+
 ## Adjacency List
 
 ## Set
@@ -35,5 +38,7 @@ It's effectively a binary tree!
 
 ## SPFA
 
-## Floyd
+## Floyd-Marshall
 
+
+## Topological Sort
