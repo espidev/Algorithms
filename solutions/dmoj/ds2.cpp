@@ -3,6 +3,8 @@
 using namespace std;
 int djs[MAXN], djrank[MAXN], N, M;
 
+// Disjoint Set Test (Data Structure Tests)
+
 int findSet(int x) { //get representative
     if (x != djs[x]) {
         djs[x] = findSet(djs[x]);

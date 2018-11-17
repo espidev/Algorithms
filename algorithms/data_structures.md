@@ -9,6 +9,8 @@
 ## Prefix Sum vs Segment Tree
 * Different ways to query sums (O(1) vs. O(nlogn))
 
+## Binary Indexed Tree (Fenwick Tree)
+
 ## Adjacency List
 
 ## Set
@@ -30,6 +32,7 @@ It's effectively a binary tree!
 ## Sparse Table
 
 ## Lowest Common Ancestor
+
 
 ## Dijkstra
    The notion of "relaxation" comes from an analogy between the estimate of the shortest path and the length of a helical tension spring, which is not designed for compression. Initially, the cost of the shortest path is an overestimate, likened to a stretched out spring. As shorter paths are found, the estimated cost is lowered, and the spring is relaxed. Eventually, the shortest path, if one exists, is found and the spring has been relaxed to its resting length.
