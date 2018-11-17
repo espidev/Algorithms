@@ -43,3 +43,5 @@ It's effectively a binary tree!
 ## Ford-Fulkerson (Edmonds-Karp) Max Flow
 
 ## Topological Sort
+
+## Bucket grouping (Dijkstra)
