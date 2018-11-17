@@ -40,6 +40,6 @@ It's effectively a binary tree!
 
 ## Floyd-Marshall
 
-## Ford-Fulkerson
+## Ford-Fulkerson (Edmonds-Karp) Max Flow
 
 ## Topological Sort

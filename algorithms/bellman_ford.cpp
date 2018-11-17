@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define MAXN 1e9
+#define MAXN 999999
 
 int N, M, S, D, a, b, w; //# of nodes, # of edges, start, end
-vector<pair<int, pair<int, int>> edges;
+vector<pair<int, pair<int, int>>> edges;
 int dist[MAXN];
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     memset(dist, 1e9, sizeof dist);
     for (int i = 0; i < N; i++) {
         scanf("%d %d %d", a, b, w);
-        edges.push_back(make_pair(a, make_pair(b, w));
+        edges.push_back(make_pair(a, make_pair(b, w)));
     }
     dist[S] = 0;
     bool flag;
@@ -20,7 +20,7 @@ int main() {
         flag = 0;
         for (pair<int, pair<int, int>> p: edges) {
             if (dist[p.second.first] > dist[p.first] + p.second.second) {
-                dist[p.second.first] = dist[p.first] + p.second.second);
+                dist[p.second.first] = dist[p.first] + p.second.second;
                 flag = true;
             }
         }
@@ -35,5 +35,5 @@ int main() {
             }
         }
     }
-    for (int a : dist) printf("%d", an);
+    for (int a : dist) printf("%d", a);
 }
