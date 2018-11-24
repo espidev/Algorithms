@@ -33,6 +33,7 @@ It's effectively a binary tree!
 
 ## Lowest Common Ancestor
 
+## Linear Recurrence (fibonacci)
 
 ## Dijkstra
    The notion of "relaxation" comes from an analogy between the estimate of the shortest path and the length of a helical tension spring, which is not designed for compression. Initially, the cost of the shortest path is an overestimate, likened to a stretched out spring. As shorter paths are found, the estimated cost is lowered, and the spring is relaxed. Eventually, the shortest path, if one exists, is found and the spring has been relaxed to its resting length.
@@ -48,3 +49,7 @@ It's effectively a binary tree!
 ## Topological Sort
 
 ## Bucket grouping (Dijkstra)
+
+## Tree Style DP
+
+## duowei 1265, 1350, 1457
