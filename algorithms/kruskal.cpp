@@ -7,7 +7,7 @@ struct edge {
     edge (int a, int b, int w) {
         this->a = a, this->b = b, this->w = w;
     }
-}
+};
 
 // disjoint set
 
@@ -44,7 +44,7 @@ vector<int> kruskal(vector<edge>& edges) {
     for (int i = 0; i < edges.size(); i++) {
         if (findSet[edges[i].a] != findSet[edges[i].b]) {
             mergeSet(edges[i].a, edges[i].b);
-            mst.push_back(edges[i]);
+            mst.push_back(i);
         }
     }
     return mst;
@@ -60,5 +60,5 @@ int main() {
         edges.push_back(edge(a, b, w));
     }
     vector<int> mst = kruskal(edges); // run kruskal
-    for (int i = 0; i < mst.size(); i++) printf("%d %d\n", mst.a, mst.b); // print edges
+    for (int i = 0; i < mst.size(); i++) printf("%d %d\n", edges[mst[i]].a, edges[mst[i]].b); // print edges
 }
