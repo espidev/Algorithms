@@ -6,6 +6,8 @@
 * stoi() can specify a base in the 3rd parameter
 * puts() is like the most useful thing ever why have i not used it what
 
+## Storing states in DP (2D Array)
+
 ## Prefix Sum vs Segment Tree
 * Different ways to query sums (O(1) vs. O(nlogn))
 
