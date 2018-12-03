@@ -13,9 +13,8 @@ int init() {
 // find the id of an integer in the set (can compare findSet(x) == findSet(y))
 
 int findSet(int x) { // get representative
-    if (x != djs[x]) {
-        djs[x] = findSet(djs[x]); // compress path after going down
-    }
+    if (x != djs[x]) djs[x] = findSet(djs[x]); // compress path after going down
+
     return djs[x];
 }
 
