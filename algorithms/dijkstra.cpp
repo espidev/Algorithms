@@ -9,7 +9,7 @@ int dijkstra(unordered_map<int, vector<pair<int, int>>>& graph, int start, int d
     dist[start] = 0;
 
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    pq.push(make_pair(start, 0));
+    pq.push(make_pair(0, start));
 
     while (!pq.empty()) {
         pair<int, int> pv = pq.top();
