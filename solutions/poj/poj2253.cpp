@@ -1,71 +1,53 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
 #include <queue>
-#include <iomanip>
+#include <cmath>
+#include <stdio.h>
 
 using namespace std;
 
-/*
- * POJ2253 Froggy
- * Incomplete
- */
-
-void dij(vector<int>& visited, queue<int>& q, vector<double>& vx, vector<pair<pair<int, int>, vector<double> > >& v) {
-    if(q.empty()) return;
-    int cur = q.front();
-    q.pop();
-    visited[cur] = true;
-    //cout << cur << " " << v[cur].second.size() << endl;
-    for(int i = 0; i < v[cur].second.size(); i++) {
-        if(i == cur) continue;
-        if(!visited[i]) q.push(i);
-        double shortest = max(vx[cur], v[i].second[cur]);
-        //cout << i << " " << vx[i] << " " << vx[cur] << " " << v[i].second[cur] << " " << shortest << endl;
-        if(vx[i] == -1) {
-            vx[i] = shortest;
-        }
-        else if(vx[i] > shortest) {
-            vx[i] = shortest;
-        }
-    }
-    dij(visited, q, vx, v);
-}
+// POJ 2253: Frogger
+// Simple dijkstra
 
 int main() {
-    int c = 1;
-    while(true) {
-        int n;
-        cin >> n;
-        if(n == 0) break;
-        cout << "Scenario #" << c << endl;
-        vector<pair<pair<int, int>, vector<double> > > v;
-        for(int i = 0; i < n; i++) {
-            int x, y;
-            cin >> x >> y;
-            v.push_back({{x, y}, vector<double>()});
+    int N, x = 1;
+    cin >> N;
+    while (N != 0) {
+        vector<double> graph[N];
+        vector<pair<int, int> > coords;
+        for (int i = 0; i < N; i++) {
+            int a, b;
+            cin >> a >> b;
+            coords.push_back(make_pair(a, b));
         }
-        for(int i = 0; i < n; i++) {
-            int x = v[i].first.first, y = v[i].first.second;
-            vector<double> dist;
-            for(int j = 0; j < v.size(); j++) {
-                pair<int, int> coord = v[j].first;
-                dist.push_back(sqrt(pow(coord.first - x, 2) + pow(coord.second - y, 2)));
+        for (int i = 0; i < N; i++) {
+            graph[i] = vector<double>(N);
+            for (int j = 0; j < N; j++) {
+                graph[i][j] = sqrt(pow(coords[i].first - coords[j].first, 2) + pow(coords[i].second - coords[j].second, 2));
             }
-            v[i].second = dist;
         }
 
-        vector<double> vx(n, -1);
-        vector<int> visited(n);
+        double dist[N+1];
+        for (int i = 0; i < N; i++) dist[i] = 1000000.0;
         queue<int> q;
         q.push(0);
+        dist[0] = 0;
+        while (!q.empty()) {
+            for (int i = 0; i < N; i++) {
+                if (i == q.front()) continue;
+                if (dist[i] > max(dist[q.front()], graph[q.front()][i])) {
+                    dist[i] = max(dist[q.front()], graph[q.front()][i]);
+                    q.push(i);
+                }
+            }
+            q.pop();
+        }
 
-        dij(visited, q, vx, v);
-
-        std::cout << std::setprecision(3) << std::fixed;
-        cout << "Frog Distance = " << vx[1] << endl;
-        cout << endl;
-        c++;
+        cout << "Scenario #" << x << endl;
+        printf("Frog Distance = %.3f", dist[1]);
+        cout << endl << endl;
+        cin >> N;
+        x++;
     }
     return 0;
 }
