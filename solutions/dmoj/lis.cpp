@@ -1,11 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
- * Longest increasing subsequence
- */
-
-
 int main() {
     int N;
     cin >> N;
