@@ -93,7 +93,7 @@ void update(int i, int v, int bi, int ei, Node *node) {
     node->minimum = min(node1->minimum, node2->minimum);
     node->gcd = gcd(node1->gcd, node2->gcd);
     node->numMin = 0;
-    int g = gcd(node1->gcd, node2->gcd);
+    int g = node->gcd;
     if (g == node1->gcd) node->numMin += node1->numMin;
     if (g == node2->gcd) node->numMin += node2->numMin;
 }

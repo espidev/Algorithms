@@ -5,23 +5,24 @@ using namespace std;
 
 int arr[MAXN];
 
+// Segment tree implementation with structs
+// This example stores both the minimum number of the set and the gcd of the set
+
 struct Node {
-    int minimum, gcd, numMin; // gcd between is either 0, or the same number
+    int minimum, gcd; // gcd between is either 0, or the same number
     Node *node1;
     Node *node2;
 
-    Node(Node *node1, Node *node2, int minimum, int gcd, int numMin) {
+    Node(Node *node1, Node *node2, int minimum, int gcd) {
         this->node1 = node1;
         this->node2 = node2;
         this->minimum = minimum;
         this->gcd = gcd;
-        this->numMin = numMin;
     }
 
-    Node(int minimum, int gcd, int numMin) {
+    Node(int minimum, int gcd) {
         this->minimum = minimum;
         this->gcd = gcd;
-        this->numMin = numMin;
     }
 };
 
@@ -37,9 +38,7 @@ Node *build(int bi, int ei) {
     Node *node1 = build(bi, mid);
     Node *node2 = build(mid + 1, ei);
     int g = gcd(node1->gcd, node2->gcd);
-    if (g == node1->gcd) numMin += node1->numMin;
-    if (g == node2->gcd) numMin += node2->numMin;
-    return new Node(node1, node2, min(node1->minimum, node2->minimum), g, numMin);
+    return new Node(node1, node2, min(node1->minimum, node2->minimum), g);
 }
 
 int query_min(int bi, int ei, int qb, int qe, Node *node) {
@@ -60,20 +59,11 @@ int query_gcd(int bi, int ei, int qb, int qe, Node *node) {
     else return gcd(a, b);
 }
 
-// return gcd numMin and minimum
-int query_gcd_equals(int bi, int ei, int qb, int qe, Node *node, int g) {
-    if (bi >= qb && qe >= ei) return node->gcd == g ? node->numMin : 0;
-    if (ei < qb || bi > qe) return 0;
-    int mid = (bi + ei) / 2;
-    return query_gcd_equals(bi, mid, qb, qe, node->node1, g) + query_gcd_equals(mid + 1, ei, qb, qe, node->node2, g);
-}
-
 void update(int i, int v, int bi, int ei, Node *node) {
     if (bi == ei) {
         if (bi == i) {
             node->minimum = v;
             node->gcd = v;
-            node->numMin = 1;
         }
         return;
     }
@@ -89,10 +79,6 @@ void update(int i, int v, int bi, int ei, Node *node) {
 
     node->minimum = min(node1->minimum, node2->minimum);
     node->gcd = gcd(node1->gcd, node2->gcd);
-    node->numMin = 0;
-    int g = gcd(node1->gcd, node2->gcd);
-    if (g == node1->gcd) node->numMin += node1->numMin;
-    if (g == node2->gcd) node->numMin += node2->numMin;
 }
 
 int N, M, b, c;
@@ -112,8 +98,6 @@ int main() {
             cout << query_min(0, N - 1, b - 1, c - 1, tree) << endl;
         } else if (a == 'G') {
             cout << query_gcd(0, N - 1, b - 1, c - 1, tree) << endl;
-        } else if (a == 'Q') {
-            cout << query_gcd_equals(0, N - 1, b - 1, c - 1, tree, query_gcd(0, N - 1, b - 1, c - 1, tree)) << endl;
         }
     }
     return 0;
