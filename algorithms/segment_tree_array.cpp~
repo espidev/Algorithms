@@ -71,7 +71,6 @@ void update_u(int change, int ui, int bi, int ei, int i) {
 }
 
 // range update
-// TODO test implementation
 
 void range_update(int bi, int ei, int qb, int qe, int i) {
     if (lazy[i] != 0) {
