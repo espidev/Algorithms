@@ -11,6 +11,7 @@
 * Internally stores elements as a balanced binary tree (fast queries with binary search using lower_bound and upper_bound).
 * By default sorts the elements by ascending order.
 * Does not allow duplicate elements.
+* Useful for inserting and deleting elements in logarthmic time.
 
 ## Storing states in DP (2D Array)
 
