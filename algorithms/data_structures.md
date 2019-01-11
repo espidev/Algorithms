@@ -5,6 +5,12 @@
 * std::bitset is useful for bit related stuffs
 * stoi() can specify a base in the 3rd parameter
 * puts() is like the most useful thing ever why have i not used it what
+* greater<int> is a useful comparator function template for specifying for data structures to sort descending (ex. set<int, greater<int>)
+
+## Set
+* Internally stores elements as a balanced binary tree (fast queries with binary search using lower_bound and upper_bound).
+* By default sorts the elements by ascending order.
+* Does not allow duplicate elements.
 
 ## Storing states in DP (2D Array)
 
