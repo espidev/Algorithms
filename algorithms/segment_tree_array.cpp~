@@ -32,15 +32,6 @@ void create_tree(int i, int bi , int ei) { // caveat: the index of the tree star
 	arr[i] = arr[i * 2] + arr[i * 2 + 1];
 }
 
-void push_down_lazy(int index, int bi, int ei) {
-	arr[index] += lazy[index] * (ei-bi);
-	if (index < N) {
-		lazy[index*2] += lazy[index] * (ei-bi); // adding sums of all values
-		lazy[index*2+1] += lazy[index] * (ei-bi);
-	}
-	lazy[index] = 0;
-}
-
 // recursively go down binary tree and add together the stored sums
 
 /*
@@ -52,7 +43,6 @@ void push_down_lazy(int index, int bi, int ei) {
  */
 
 int query_u(int bi, int ei, int qb, int qe, int i) {
-	push_down_lazy(i, bi, ei);
 	if (qb <= bi && ei <= qe) return arr[i]; //if the segment is completely inside the required query, return it
 	if (ei < qb || qe < bi) return 0; // if the segment completely outside of the required query, ignore it
 	int mid = (bi + ei) / 2; 
@@ -83,15 +73,20 @@ void update_u(int change, int ui, int bi, int ei, int i) {
 // range update
 // TODO test implementation
 
-void range_update(int change, int bi, int ei, int qb, int qe, int i) {
-	if (lazy[i]) change += lazy[i];
-	if (ei < qb || bi > qe) return;
-	lazy[i] = change;
-	if (bi >= qb && ei <= qe) return;
-	push_down_lazy(i, bi, ei);
-	int mid = (bi + ei) / 2;
-	range_update(change, bi, mid, qb, qe, i*2);
-	range_update(change, mid+1, ei, qb, qe, i*2+1);
+void range_update(int bi, int ei, int qb, int qe, int i) {
+    if (lazy[i] != 0) {
+    	arr[i] += (ei - bi + 1) * lazy[i];
+	if (bi != ei) {
+		lazy[i*2] += lazy[i];
+		lazy[i*2+1] += lazy[i];
+	}
+	lazy[node] = 0;
+    }
+    if (bi >= qb && ei <= qe) return arr[i];
+    int mid = (bi + ei) / 2;
+    int p1 = range_update(bi, mid, qb, qe, i*2);
+    int p2 = range_update(mid+1, ei, qb, qe, i*2+1);
+    return p1 + p2;
 }
 
 int main() {
@@ -99,7 +94,7 @@ int main() {
 
 	N = 8; // size of array
 	arr = new int[2 * N]; // init array
-    	lazy = new int[2 * N];
+    lazy = new int[2 * N];
 	input = new int[N];
 
 	// populate input array with values
