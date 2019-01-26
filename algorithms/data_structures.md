@@ -13,6 +13,8 @@
 * Does not allow duplicate elements.
 * Useful for inserting and deleting elements in logarthmic time.
 
+## Sweep linex
+
 ## Storing states in DP (2D Array)
 
 ## Prefix Sum vs Segment Tree
