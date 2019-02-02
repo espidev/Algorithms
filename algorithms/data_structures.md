@@ -42,6 +42,7 @@ It's effectively a binary tree!
 * Dot Product: The length of the "shadow" or "projection" that one vector has on another when put on a common point.
 * Use it to find the angle between two vectors, by moving both's origin to the point of origin (0, 0)
 * Use to determine if several points are on the same line without division (cross product)
+* http://www.hackerearth.com/practice/notes/computational-geometry-i-1
 
 ## Trie
 ## Sparse Table
