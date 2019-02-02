@@ -21,6 +21,10 @@
 * | - OR
 * ^ - XOR
 
+## Sequence DP
+
+## DP on the Interval
+
 ## Storing states in DP (2D Array)
 
 ## Prefix Sum vs Segment Tree
