@@ -15,6 +15,12 @@
 
 ## Sweep line Algorithm
 
+## Bitmask
+* ~ - COMPLIMENT (flips bit)
+* & - AND
+* | - OR
+* ^ - XOR
+
 ## Storing states in DP (2D Array)
 
 ## Prefix Sum vs Segment Tree
