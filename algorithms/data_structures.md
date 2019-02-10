@@ -15,6 +15,9 @@
 
 ## Sweep line Algorithm
 
+## Kruskal's vs. Prim's
+* Prim's has to be used instead of Kruskal's when getting a subset of the minimum spanning tree
+
 ## Bitmask
 * ~ - COMPLIMENT (flips bit)
 * & - AND
