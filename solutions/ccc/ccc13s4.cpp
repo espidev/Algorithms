@@ -6,24 +6,12 @@ using namespace std;
 int N, M, p, q;
 vector<vector<int>> v (MAXN);
 
-bool dfs1(int node) {
+bool dfs(int node, int compare) {
 	if (node == q) return true;
 	if (v[node].size() == 0) return false;
 	for (int i = 0; i < v[node].size(); i++) {
-		if (dfs1(v[node][i])) {
-			return true;
-		}
+		if (dfs(v[node][i], compare)) return true;
 	}
-}
-
-bool dfs2(int node) {
-        if (node == p) return true;
-        if (v[node].size() == 0) return false;
-        for (int i = 0; i < v[node].size(); i++) { 
-                if (dfs2(v[node][i])) {
-			return true;
-		}
-        }
 }
 
 
@@ -35,9 +23,9 @@ int main() {
 		v[x].push_back(y);
 	}
 	cin >> p >> q;
-	if (dfs1(p)) {
+	if (dfs(p, q)) {
 		cout << "yes" << endl;
-	} else if (dfs2(q)) {
+	} else if (dfs(q, p)) {
 		cout << "no" << endl;
 	} else {
 		cout << "unknown" << endl;
