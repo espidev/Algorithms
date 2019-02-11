@@ -25,11 +25,10 @@ vector<int> y_map(MAXN);
 unordered_map<int, vector<Point>> yAtX; // <x value, points at x>
 
 void update(int l, int r, int cur, int node, int setTo) {
-	if (l > node || r < node) {
-		return;		
-	}
-	if (l == r && node == l) {
-		segtree[cur] += setTo;
+	if (l > node || r < node) return;		
+	if (l == r) {
+		if (node == l) segtree[cur] += setTo;
+		return;
 	}
 	int mid = (l + r) / 2
 	update(l, mid, cur*2, node, setTo);
@@ -38,12 +37,8 @@ void update(int l, int r, int cur, int node, int setTo) {
 }
 
 int query(int l, int r, int cur, int b, int e) {
-	if (l > e || r < l) {
-		return 0;
-	}
-	if (b <= l && e >= r) {
-		return segtree[cur];
-	}
+	if (l > e || r < l) return 0;
+	if (b <= l && e >= r) return segtree[cur];
 	int mid = (l + r) / 2;
 	return query(l, mid, cur*2, b, e) + query(mid+1, r, cur*2+1, b, e);
 }
