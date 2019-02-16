@@ -41,7 +41,7 @@ int main() {
     for (int i = 0; i < M; i++) {
         cin >> c;
         int nodes[c+1];
-        for (int j = 0; j < c; j++) cin >> nodes[j];        
+        for (int j = 0; j < c; j++) cin >> nodes[j];
         for (int j = 0; j < c; j++) {
             int cost;
             cin >> cost;
@@ -64,17 +64,10 @@ int main() {
             }
         }
     }
-    /*for (pair<int, int> p : s) {
-        auto l = m.find(p);
-        int ecost = l->second.cost, enode = l->second.node;
-        edges.push_back(Edge(0, enode, ecost));
-        edges.push_back(Edge(enode, 0, ecost));
-    }*/
-
     sort(edges.begin(), edges.end(), [](Edge a, Edge b) {
             return a.w < b.w;
         });
-    
+
     int ans = 0, ans2 = 0;
     for (Edge edge : edges) {
         if (djfind(edge.a) != djfind(edge.b)) {
@@ -90,9 +83,9 @@ int main() {
         edges.push_back(Edge(enode, 0, ecost));
     }
     for (int i = 0; i < 101; i++) djs[i] = i;
-    
+
     sort(edges.begin(), edges.end(), [](Edge a, Edge b) {
-        return a.w < b.w;       
+        return a.w < b.w;
     });
 
     for (Edge edge : edges) {
