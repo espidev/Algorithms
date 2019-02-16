@@ -7,6 +7,7 @@
 * puts() is like the most useful thing ever why have i not used it what
 * greater<int> is a useful comparator function template for specifying for data structures to sort descending (ex. set<int, greater<int>)
 * A.erase(unique(A.begin(), A.end()), A.end()); // make vector have only unique elements
+* For C++, string.split(" ") from Java can be implemented with istringstream ss(str), and then do ss >> var to get the first string, and so on (like cin).
 
 ## Shoelace Theorem
 

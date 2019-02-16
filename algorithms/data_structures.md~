@@ -8,6 +8,10 @@
 * greater<int> is a useful comparator function template for specifying for data structures to sort descending (ex. set<int, greater<int>)
 * A.erase(unique(A.begin(), A.end()), A.end()); // make vector have only unique elements
 
+## Shoelace Theorem
+
+## Pick's Theorem
+
 ## Set
 * Internally stores elements as a balanced binary tree (fast queries with binary search using lower_bound and upper_bound).
 * By default sorts the elements by ascending order.
