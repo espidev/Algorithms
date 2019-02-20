@@ -27,9 +27,9 @@ int main() {
     for (int r = 0; r < N; r++) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (matrix[i][j] > matrix[i][r][1] + matrix[r][j] && (matrix[i][r] != LONG_MAX) && (matrix[r][j] != LONG_MAX)) { // OVERFLOW CHECK AAAAAAAA
-                    matrix[i][j] = matrix[i][r][1] + matrix[r][j];
-                    matrix[i][j] = (matrix[i][j][1] < 0) ? 0 : matrix[i][j];
+                if (matrix[i][j] > matrix[i][r] + matrix[r][j] && (matrix[i][r] != LONG_MAX) && (matrix[r][j] != LONG_MAX)) { // OVERFLOW CHECK AAAAAAAA
+                    matrix[i][j] = matrix[i][r] + matrix[r][j];
+                    matrix[i][j] = (matrix[i][j] < 0) ? 0 : matrix[i][j];
                 }
             }
         }

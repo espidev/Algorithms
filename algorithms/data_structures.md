@@ -78,7 +78,8 @@ It's effectively a binary tree!
 
 ## SPFA
 
-## Floyd-Marshall
+## Floyd-Warshall
+* aka All Pairs shortest path
 
 ## Ford-Fulkerson (Edmonds-Karp) Max Flow
 
@@ -88,5 +89,5 @@ It's effectively a binary tree!
 
 ## Tree Style DP
 
-## catalan Numbers
+## Catalan Numbers
 ## duowei 1265, 1350, 1457
