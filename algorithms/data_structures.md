@@ -37,6 +37,9 @@
 
 ## Storing states in DP (2D Array)
 
+## Prefix Sum 
+* Also prefix max, and suffix max
+
 ## Prefix Sum vs Segment Tree
 * Different ways to query sums (O(1) vs. O(nlogn))
 
@@ -65,6 +68,7 @@ It's effectively a binary tree!
 * http://www.hackerearth.com/practice/notes/computational-geometry-i-1
 
 ## Trie
+
 ## Sparse Table
 
 ## Lowest Common Ancestor
