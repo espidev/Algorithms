@@ -83,7 +83,7 @@ It's effectively a binary tree!
 ## SPFA
 
 ## Floyd-Warshall
-* aka All Pairs shortest path
+* aka all pairs shortest path
 
 ## Ford-Fulkerson (Edmonds-Karp) Max Flow
 
@@ -92,6 +92,8 @@ It's effectively a binary tree!
 ## Bucket grouping (Dijkstra)
 
 ## Tree Style DP
+
+## SCC (Strongly Connected Components)
 
 ## Catalan Numbers
 ## duowei 1265, 1350, 1457
