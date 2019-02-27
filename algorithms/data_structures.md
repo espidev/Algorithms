@@ -43,15 +43,16 @@ struct hashing {
 * Can compress points on a cartesian plane by inserting them into a set, and mapping it to indexes
 
 ## Sweep line Algorithm
+* Iterate over x coordinates and feed into segtree
 
 ## Kruskal's vs. Prim's
-* Prim's has to be used instead of Kruskal's when getting a subset of the minimum spanning tree
+* Prim's has to be used instead of Kruskal's when getting a subset of the minimum spanning tree.
 
 ## Bitmask
 * ~ - COMPLIMENT (flips bit)
-* & - AND
-* | - OR
-* ^ - XOR
+* & - AND (1 if both are 1)
+* | - OR (1 if one is 1 or both is 1)
+* ^ - XOR (1 if one is 1, but not when both is 1)
 
 ## Sequence DP
 
@@ -67,21 +68,26 @@ struct hashing {
 
 ## Binary Indexed Tree (Fenwick Tree)
 
-## Adjacency List
+## Adjacency List & Adjacency Matrix
+* Adjacency list
 
 ## Set
 * A list of values in an unique order, and is stored as a binary search tree.
+* Find lookups take O(logN) time, so it's good for detecting if an item is part of a set
 
 ## Priority Queue
 * When you edit values of a priority queue, the queue is not automatically updated (or ordered)
+* Insert operations are automatically ordered
 
-## Segment Tree (Range Query)
+## Segment Tree (Range Query and Update)
 
 It's effectively a binary tree!
 <br>
 [Link to Article] (https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)
 
 ## Disjoint set (Union Find)
+* Detect if 2 items are part of the same set
+* Ranking compression can be used (smaller set merged into the larger set)
 
 ## Cross + Dot Product
 * Dot Product: The length of the "shadow" or "projection" that one vector has on another when put on a common point.
@@ -90,8 +96,11 @@ It's effectively a binary tree!
 * http://www.hackerearth.com/practice/notes/computational-geometry-i-1
 
 ## Trie
+* Dictionary search for strings on a tree
+* Nodes are characters
 
 ## Sparse Table
+* RMQ and just range queries with powers of 2
 
 ## Lowest Common Ancestor
 
@@ -106,6 +115,8 @@ It's effectively a binary tree!
 
 ## Floyd-Warshall
 * aka all pairs shortest path
+* Iterate over edges
+* Compare direct connection weight between 2 nodes or weight between 2 nodes using node k
 
 ## Ford-Fulkerson (Edmonds-Karp) Max Flow
 
