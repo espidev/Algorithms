@@ -75,6 +75,9 @@ struct hashing {
 * A list of values in an unique order, and is stored as a binary search tree.
 * Find lookups take O(logN) time, so it's good for detecting if an item is part of a set
 
+## Divide and Conquer
+* Check USACO 12 P3
+
 ## Priority Queue
 * When you edit values of a priority queue, the queue is not automatically updated (or ordered)
 * Insert operations are automatically ordered
