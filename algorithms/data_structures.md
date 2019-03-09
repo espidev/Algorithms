@@ -2,6 +2,7 @@
 
 * When computing number of subsets, it's 2^N and should be using bitmask
 * __builtin_popcount(unsigned int) in the GNU C++ compiler calculates the number of 1s in a binary number (Integer.bitCount(i, j) in Java)
+* __builtin_clz() -- Count leading zeroes
 * std::bitset is useful for bit related stuffs
 * stoi() can specify a base in the 3rd parameter
 * puts() is like the most useful thing ever why have i not used it what
