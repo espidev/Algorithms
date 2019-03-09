@@ -130,6 +130,12 @@ It's effectively a binary tree!
 
 ## Tree Style DP
 
+## 1D/1D DP Optimization
+* Optimization of dp[i] = max/min{dp[j]+u(i,j)}
+* Move variable j right over time, rather than always starting at furthest left.
+* Use deque to keep track of optimal solutions
+* https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti
+
 ## SCC (Strongly Connected Components)
 
 ## Catalan Numbers
