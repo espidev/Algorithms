@@ -26,9 +26,15 @@ void generate() {
 }
 
 int query(int l, int r) {
+    r = min(r, N-1);
+    l = max(0, l);
+    r = max(0, r);
+    l = min(l, N-1);
     int level = log2(r - l + 1);
     return max(sparse[l][level], sparse[r - (1 << level) + 1][level]);
 }
+
+bool dumb = false;
 
 ull r(int node, int groups, int start) {
     //cout << node << " " << groups << " " << start << endl;
@@ -42,6 +48,11 @@ ull r(int node, int groups, int start) {
     for (int i = ((start > 0) ? start : min(K, N-node)); i <= min(K, N-node); i++) {
         ull q = query(node, max(0, node+i-1));
 
+	if (start > 0 && !dumb) {
+		ull k = v[node+i], qu = query(node+i, node + start + K - 1);
+		if (k < qu && k) continue; 
+	}
+
         auto d = ma.find(make_pair(node+i, groups+1));
         if (d != ma.end()) {
             score = max(q + d->second, score);
@@ -54,6 +65,8 @@ ull r(int node, int groups, int start) {
     ma.insert(make_pair(make_pair(node, groups), score));
     return score;
 }
+
+// don't ever use this solution it's very bad
 
 int main() {
     scanf("%d %d", &N, &K);
@@ -71,6 +84,19 @@ int main() {
         sum += query(N-i-1, N-(i-K)-1);
         calc[N-i-1] = sum;
     }
-    cout << r(0, 0, N%K) << endl;
+
+    if (2*K > N) {
+	cout << r(0, 0, N%K) << endl;
+	return;
+    }
+
+    ull l = r(0, 0, N%K);
+    if (!l) {
+	dumb = true;
+	cout << r(0, 0, N%K) << endl;
+    } else {
+        cout << l << endl;
+    }
     return 0;
 }
+
