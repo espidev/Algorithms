@@ -85,13 +85,13 @@ int main() {
         calc[N-i-1] = sum;
     }
 
-    if (2*K > N) {
+    if (2*K > N) { // bad 1
 	cout << r(0, 0, N%K) << endl;
 	return;
     }
 
     ull l = r(0, 0, N%K);
-    if (!l) {
+    if (!l) { // bad 2
 	dumb = true;
 	cout << r(0, 0, N%K) << endl;
     } else {
