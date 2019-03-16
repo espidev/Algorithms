@@ -135,6 +135,7 @@ It's effectively a binary tree!
 * Move variable j right over time, rather than always starting at furthest left.
 * Use deque to keep track of optimal solutions
 * https://sites.google.com/site/ubcprogrammingteam/news/1d1ddynamicprogrammingoptimization-parti
+* check solutions/dmoj/ccoprep3p2.cpp
 
 ## SCC (Strongly Connected Components)
 
