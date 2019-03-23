@@ -32,6 +32,11 @@ struct hashing {
 };
 ` 
 
+## Rolling Hash
+* Use when you need bitmask but the number is too large (>64 digits)
+* Make a map that contains every possibility of a ull key
+* Each key is 1 digit right, and minus 1 digit left
+
 ## Shoelace Theorem
 
 ## Pick's Theorem
