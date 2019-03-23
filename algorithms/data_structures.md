@@ -60,6 +60,11 @@ struct hashing {
 * | - OR (1 if one is 1 or both is 1)
 * ^ - XOR (1 if one is 1, but not when both is 1)
 
+## Quadrangle Inequality
+* f(i, j) + f(i+1, j+1) <= f(i, j+1) + f(i+1, j)
+* DP optimization with this property
+* Only search for > j+1 if true (nothing on the left is optimal)
+
 ## Sequence DP
 
 ## DP on the Interval
