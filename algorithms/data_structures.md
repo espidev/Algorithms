@@ -64,6 +64,7 @@ struct hashing {
 * f(i, j) + f(i+1, j+1) <= f(i, j+1) + f(i+1, j)
 * DP optimization with this property
 * Only search for > j+1 if true (nothing on the left is optimal)
+* ex. Tourism (CCC19S4)
 
 ## Sequence DP
 
