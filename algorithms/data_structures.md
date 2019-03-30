@@ -35,7 +35,7 @@ struct hashing {
 ## Rolling Hash
 * Use when you need bitmask but the number is too large (>64 digits)
 * Make a map that contains every possibility of a ull key
-* Each key is 1 digit right, and minus 1 digit left
+* Each subsequent key is 1 more digit right (for right index), and 1 more digit right (for left index)
 
 ## Shoelace Theorem
 
@@ -43,13 +43,20 @@ struct hashing {
 
 ## Set
 * Internally stores elements as a balanced binary tree (fast queries with binary search using lower_bound and upper_bound).
-* By default sorts the elements by ascending order.
+* By default sorts the elements by ascending order (can use unordered_set instead, but must define equality method).
 * Does not allow duplicate elements.
 * Useful for inserting and deleting elements in logarthmic time.
 * Can compress points on a cartesian plane by inserting them into a set, and mapping it to indexes
 
-## Sweep line Algorithm
-* Iterate over x coordinates and feed into segtree
+## Sweep Line Algorithm
+* Vertical line that "sweeps" right across the whole plane.
+* Only stops and processes at "event points", which are vertical lines that contain points.
+* Can be used to find which two points on cartesian plane are the closest.
+- Keep track of index "l" while looping that is always x coordinates that are acceptable and can still be optimal (disregard far away points by x)
+* Can be used to find what the total area is of overlapping rectangles.
+* Method of thinking, where data is processed left to right over x coordinates on a cartesian plane.
+* Iterate over x coordinates and feed into segtree (for some problems).
+
 
 ## Kruskal's vs. Prim's
 * Prim's has to be used instead of Kruskal's when getting a subset of the minimum spanning tree.
@@ -64,7 +71,7 @@ struct hashing {
 * f(i, j) + f(i+1, j+1) <= f(i, j+1) + f(i+1, j)
 * DP optimization with this property
 * Only search for > j+1 if true (nothing on the left is optimal)
-* ex. Tourism (CCC19S4)
+* ex. Tourism (CCC19S4), apio10p1
 
 ## Sequence DP
 
