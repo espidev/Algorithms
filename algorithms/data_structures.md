@@ -20,6 +20,7 @@ struct loc {
     }
 };
 `
+* swap(a, b) - swap two variables saving 2 lines of code 
 
 ## Hashing
 * Can use C++ std::hash<T>()(value) to hash values
@@ -36,6 +37,11 @@ struct hashing {
 * Use when you need bitmask but the number is too large (>64 digits)
 * Make a map that contains every possibility of a ull key
 * Each subsequent key is 1 more digit right (for right index), and 1 more digit right (for left index)
+
+## Mo's Algorithm
+* Range queries, where the queries are used to preprocess solutions.
+* Sort the queries
+* Maintain L and R pointer
 
 ## Shoelace Theorem
 
@@ -96,6 +102,13 @@ struct hashing {
 
 ## Divide and Conquer
 * Check USACO 12 P3
+
+## Square Root Decomposition
+* Grouping of blocks by sqrt(n)
+* Update: O(1)
+* Query: O(1) for complete blocks
+* Query: Brue force for partial parts of blocks
+* DMOJ Example: HopScotch
 
 ## Priority Queue
 * When you edit values of a priority queue, the queue is not automatically updated (or ordered)
@@ -158,4 +171,3 @@ It's effectively a binary tree!
 ## SCC (Strongly Connected Components)
 
 ## Catalan Numbers
-## duowei 1265, 1350, 1457
