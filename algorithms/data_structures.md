@@ -86,7 +86,9 @@ struct hashing {
 ## Storing states in DP (2D Array)
 
 ## Prefix Sum 
+* O(1) range queries
 * Also prefix max, and suffix max
+* Can also do prefix xor
 
 ## Prefix Sum vs Segment Tree
 * Different ways to query sums (O(1) vs. O(nlogn))
