@@ -11,7 +11,7 @@
 * For C++, string.split(" ") from Java can be implemented with istringstream ss(str), and then do ss >> var to get the first string, and so on (like cin).
 * C++ compilers optimize sequential array searching (row, not column), so use that when possible.
 * Column searching has performance hits especially when iterating over sizes that are powers of 2 (https://stackoverflow.com/questions/12264970/why-is-my-program-slow-when-looping-over-exactly-8192-elements?rq=1)
-* To specify comparator for a struct, use the operator== override
+* To specify comparator for a struct, use the operator == override
 * Example: `
 struct loc {
     int x, y, vx, vy;
@@ -32,6 +32,19 @@ struct hashing {
     }
 };
 ` 
+
+### Manual String Hash
+* One string hashing algorithm you can do is: hash = hash * base + str[i]
+* Ex: "a" -> 'a' (ascii)
+* Ex: "aba" -> (('a' * 31) + 'b') * 31 + 'a'
+* Ex: "abab" -> ((('a' * 31) + 'b') * 31 + 'a') * 31 + 'b'
+* Used by Java's hashCode() method
+* Manual hash can create a map for O(1) queries of any substring of a string (like prefix sum array)
+* `
+	hash = 0
+	for (int i = 0; i < str.length(); i++) 
+		hash = hash * base + str.charAt(i)
+`
 
 ## Rolling Hash
 * Use when you need bitmask but the number is too large (>64 digits)
@@ -101,6 +114,8 @@ struct hashing {
 ## Set
 * A list of values in an unique order, and is stored as a binary search tree.
 * Find lookups take O(logN) time, so it's good for detecting if an item is part of a set
+* By default does not allow multiple values
+* For duplicate values, use std::multiset (c++)
 
 ## Divide and Conquer
 * Check USACO 12 P3
