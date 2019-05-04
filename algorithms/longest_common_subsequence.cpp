@@ -1,24 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-int N, M, dp[1001][1001];
 
-int lcs(vector<int>& a, vector<int>& b, int i, int j) {
-    if (!i || !j) return 0;
-    if (dp[i][j] != -1) return dp[i][j];
-    if (a[i-1] == b[j-1]) return dp[i][j] = 1 + lcs(a, b, i-1, j-1);
-    return dp[i][j] = max(lcs(a, b, i-1, j), lcs(a, b, i, j-1));
+map<pair<int, int>, string> m;
+string dp[1001][1001];
+
+// brute force removing either one character from a, or one character from b each time
+
+string string_lcs(string& a, string& b, int i, int j) {
+    if (!i | !j) return "";
+    if (!dp[i][j].empty()) return dp[i][j];
+    if (a[i-1] == b[j-1]) return dp[i][j] = string_lcs(a, b, i-1, j-1) + a[i-1];
+    string c = string_lcs(a, b, i-1, j), d = string_lcs(a, b, i, j-1);
+    return dp[i][j] = (c.length() > d.length()) ? c : d;
 }
 
+
 int main() {
-    cin.sync_with_stdio(0);
-    cin.tie(0);
-    cin >> N >> M;
-    vector<int> a(N), b(M);
-
-    for (int i = 0; i < N; i++) cin >> a[i];
-    for (int i = 0; i < M; i++) cin >> b[i];
-
-    memset(dp, -1, sizeof dp);
-    printf("%d\n", lcs(a, b, N, M));
+    string a = "abcdef", b = "bdmafkt";
+    for (int i = 0; i < 1001; i++) for (int j = 0; j < 1001; j++) dp[i][j] = "";
+    cout << string_lcs(a, b, a.length(), b.length()) << endl;
     return 0;
 }
