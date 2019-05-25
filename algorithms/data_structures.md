@@ -12,6 +12,7 @@
 * C++ compilers optimize sequential array searching (row, not column), so use that when possible.
 * Column searching has performance hits especially when iterating over sizes that are powers of 2 (https://stackoverflow.com/questions/12264970/why-is-my-program-slow-when-looping-over-exactly-8192-elements?rq=1)
 * To specify comparator for a struct, use the operator == override
+* std::reverse reverses an array, std::rotate rotates an array
 * Example: `
 struct loc {
     int x, y, vx, vy;
@@ -59,6 +60,11 @@ struct hashing {
 ## Shoelace Theorem
 
 ## Pick's Theorem
+
+## Find Minimum Manhattan Distance (grid)
+* Rotate the frame into a diamond
+
+## Find Minimum Euclidean Distance
 
 ## Set
 * Internally stores elements as a balanced binary tree (fast queries with binary search using lower_bound and upper_bound).
@@ -150,6 +156,10 @@ It's effectively a binary tree!
 ## Trie
 * Dictionary search for strings on a tree
 * Nodes are characters
+
+## Euler's Tour
+* A way to represent a tree in a sequence
+* Can be used with Mo's Algorithm to find the LCA (lowest common ancestor)
 
 ## Sparse Table
 * RMQ and just range queries with powers of 2
