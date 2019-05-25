@@ -196,5 +196,14 @@ It's effectively a binary tree!
 * check solutions/dmoj/ccoprep3p2.cpp
 
 ## SCC (Strongly Connected Components)
+* A directed graph is strong connected if there is a path from each vertex in the graph to every other vertex (paths in each direction, so a to b and b to a)
+* Algorithms: Kosaraju's algorithm, Tarjan's algorithm, Gabow's algorithm
+
+## Tarjan's Algorithm (SCC)
+* DFS
+* dfn[u] - number visited in DFS
+* low[u] - lowest dfn reachable from u
+* stack holds nodes that have been visited once
+* Loop over all edges, check if v is not visited
 
 ## Catalan Numbers
