@@ -1,23 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
- * Longest increasing subsequence
- */
-
+// Longest increasing subsequence
 
 int main() {
     int N;
     cin >> N;
-    int P[N], M[N + 1], X[N];
-    memset(P, 0, sizeof P);
-    memset(M, 0, sizeof M);
+    int M[N + 1], X[N];
+    memset(M, 0, sizeof M); // among all subsequence with length i, m(i) is the min value ending at the sequence
     memset(X, 0, sizeof X);
     for (int i = 0; i < N; i++) cin >> X[i];
+
     int L = 0;
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++) { // loop through each character 
         int low = 1, high = L;
-        while (low <= high) {
+        while (low <= high) { // binary search 
             auto mid = (int) ceil((low + high) / 2);
             if (X[M[mid]] < X[i]) {
                 low = mid + 1;
@@ -25,18 +22,8 @@ int main() {
                 high = mid - 1;
             }
         }
-        int newLow = low;
-        P[i] = M[newLow - 1];
-        M[newLow] = i;
-        if (newLow > L) {
-            L = newLow;
-        }
-    }
-    int S[L];
-    int k = M[L];
-    for (int i = L - 1; i > -1; i--) {
-        S[i] = X[k];
-        k = P[k];
+        M[low] = i;
+        if (low > L) L = low;
     }
     cout << L << endl;
     return 0;
