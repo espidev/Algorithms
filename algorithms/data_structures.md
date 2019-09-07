@@ -4,6 +4,7 @@
 * __builtin_popcount(unsigned int) in the GNU C++ compiler calculates the number of 1s in a binary number (Integer.bitCount(i, j) in Java)
 * __builtin_clz() -- Count leading zeroes
 * std::bitset is useful for bit related stuffs
+* atoi() int to string
 * stoi() can specify a base in the 3rd parameter
 * puts() is like the most useful thing ever why have i not used it what
 * greater<int> is a useful comparator function template for specifying for data structures to sort descending (ex. set<int, greater<int>)
@@ -97,6 +98,22 @@ struct hashing {
 * DP optimization with this property
 * Only search for > j+1 if true (nothing on the left is optimal)
 * ex. Tourism (CCC19S4), apio10p1
+
+## Binary Search Tree
+* Insert, Delete, Find
+* Left children are smaller than node, right children are larger
+* Can use GNU PBDS implementation in C++ (can use for contests)
+
+### Treaps
+* Randomized binary search tree
+* Each node contains: data/key, priority, left and right child reference
+* Each priority is randomly generated
+* Is a heap (each node is larger/smaller than all children)
+* O(logn)
+* Simple to implement
+#### Insert
+* Insert as normal BST
+* Rotate up until normal heap order is restored
 
 ## Sequence DP
 
