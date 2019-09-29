@@ -4,8 +4,8 @@ using namespace std;
 /*
  * Segment tree with array
  *
- * Find sum for certain range in array in Olog(n)
- * Update value and range of values (using lazy propagation) in Olog(n)
+ * Find sum for certain range in array in O(nlogn)
+ * Update value and range of values (using lazy propagation) in O(nlogn)
  */
 
 #define MAXN 100000
