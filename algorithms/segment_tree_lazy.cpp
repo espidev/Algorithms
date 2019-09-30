@@ -5,9 +5,7 @@ using namespace std;
 int N, Q, a, b, c, d, segtree[10001 * 2 + 1], lazy[10001 * 2 + 1];
 
 void push_down_lazy(int node, int l, int r) {
-    if (l == r) {
-        segtree[node] += lazy[node] * (r - l);
-    } else {
+    if (l != r) {
         int mid = (r + l) / 2;
         lazy[node * 2] += lazy[node] * (mid - l);
         lazy[node * 2 + 1] += lazy[node] * (r - (mid+1));
