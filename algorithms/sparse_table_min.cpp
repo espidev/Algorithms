@@ -5,6 +5,7 @@ using namespace std;
 
 /*
  * Sparse Table (min value queries)
+ * for each index arr[i][j], is the min from i to 2^j
  */
 
 int N, Q;
@@ -18,6 +19,7 @@ void generate() {
 	int levels = floor(log2(N));
 	for (int i = 1; i <= levels; i++) {
 		for (int j = 0; j < N; j++) {
+			// compare range j -> 2^i-1, to range j+2^i -> 2^i-1 
 			arr[j][i] = min(arr[j][i-1], arr[j + (1 << (i - 1))][i-1]); // function here
 		}
 	}
