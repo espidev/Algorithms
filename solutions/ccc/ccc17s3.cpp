@@ -1,47 +1,37 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int N;
-int v[5000];
-unordered_map<int, vector<int>> sums;
-int dums[5000];
-
-/*
- * CCC17S3
- */
+int N, arr[1000001], lengths[2001];
+unordered_map<int, int> m;
 
 int main() {
+    cin.sync_with_stdio(0);
+    cin.tie(0);
     cin >> N;
-    for (int i = 0, a; i < N; i++) {
-        scanf("%i", &a);
-        //cin >> a;
-        //a = (rand()%600)+1;
-        //cout << a << endl;
-        v[a]++;
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
+        lengths[arr[i]]++;
     }
-    for (int i = 1; i < 5000; i++) {
-        if (v[i]) {
-            for (int j = i; j < 5000; j++) {
-                if (i == j) {
-                    dums[i + j] += v[i] / 2;
-                } else if (v[j]) {
-                    dums[i + j] += min(v[i], v[j]);
-                }
+
+    for (int i = 1; i < 2001; i++) {
+        if (lengths[i] > 1) {
+            if (m.find(i+i) == m.end()) m.insert(make_pair(i+i, 0));
+            m[i+i] += lengths[i]/2;
+        }
+        for (int j = i+1; j < 2001; j++) {
+            if (lengths[i] && lengths[j]) {
+                if (m.find(i+j) == m.end()) m.insert(make_pair(i+j, 0));
+                m[i+j] += min(lengths[i], lengths[j]);
             }
         }
     }
-    int mSum = 0, nmSum = 0;
-    for (int i = 0; i < 5000; i++) {
-        if (dums[i] == mSum) {
-            nmSum++;
-        }
-        if (dums[i] > mSum) {
-            nmSum = 1;
-            mSum = dums[i];
+
+    int len = 0, diff = 0;
+    for (pair<int, int> p : m) {
+        if (p.second > len) {
+            len = p.second;
+            diff = 1;
+        } else if (p.second == len) {
+            diff++;
         }
     }
-    cout << mSum << " " << nmSum << endl;
-    return 0;
-}
-
