@@ -115,6 +115,9 @@ struct hashing {
 * Insert as normal BST
 * Rotate up until normal heap order is restored
 
+## Binary Search
+* Use for minimum of maximum or maximum of minimum problems.
+
 ## Sequence DP
 
 ## DP on the Interval
@@ -155,7 +158,6 @@ struct hashing {
 * Insert operations are automatically ordered
 
 ## Segment Tree (Range Query and Update)
-
 It's effectively a binary tree!
 <br>
 [Link to Article] (https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)
